@@ -8,7 +8,7 @@ const Navbar = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY >= 150) {
+      if (window.scrollY >= 100) {
         setIsStickyNav(true);
       } else {
         setIsStickyNav(false);
@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <header
       className={`py-5 transition-all ${
-        isStickyNav ? "sticky top-0 bg-white py-6" : "relative"
+        isStickyNav ? "sticky top-0 bg-white py-6 z-50" : "relative"
       }`}
     >
       <nav>
@@ -77,6 +77,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-// box-shadow: 0px 4px 4px 0px #4A4CC759;
-// box-shadow: 0px 4px 4px 0px #FFAD331C;
