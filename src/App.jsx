@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar/Navbar";
 import BreadCrumb from "./components/BreadCrumb/BreadCrumb";
 import Media from "./components/Media/Media";
 import Properties from "./components/Properties/Properties";
+import Amenities from "./components/Amenities/Amenities";
+import Facilities from "./components/Facilities/Facilities";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <BreadCrumb />
       <Media />
       <Properties />
+      <Amenities />
+      <Facilities />
     </Fragment>
   );
 }

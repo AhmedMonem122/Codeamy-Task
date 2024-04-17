@@ -38,7 +38,7 @@ const Properties = () => {
                   4 Review
                 </span>
               </div>
-              <div className="ml-4 font-[400] text-[16px] text-[#666666] flex items-center text-nowrap">
+              <div className="ml-4 font-[400] text-[14px] sm:text-[16px] text-[#666666] flex items-center text-nowrap">
                 <span>Listed By</span>
                 <a href="" className="text-[#5570F1] underline ml-1">
                   Ahmed Ali
