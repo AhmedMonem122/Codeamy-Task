@@ -6,6 +6,8 @@ import Media from "./components/Media/Media";
 import Properties from "./components/Properties/Properties";
 import Amenities from "./components/Amenities/Amenities";
 import Facilities from "./components/Facilities/Facilities";
+import Reviews from "./components/Reviews/Reviews";
+import SimilarProperties from "./components/SimilarProperties/SimilarProperties";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <Properties />
       <Amenities />
       <Facilities />
+      <Reviews />
+      <SimilarProperties />
     </Fragment>
   );
 }
