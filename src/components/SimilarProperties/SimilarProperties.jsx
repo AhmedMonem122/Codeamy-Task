@@ -6,9 +6,10 @@ import { IoMdArrowForward } from "react-icons/io";
 import { PiBedLight } from "react-icons/pi";
 import { BiBath } from "react-icons/bi";
 import { TbZoomInArea } from "react-icons/tb";
-import "./SimilarProperties.css";
 
 import similarPropertiesImage1 from "../../assets/images/Similar Properties image 1.png";
+import SimilarPropertiesSliderNextArrow from "./SimilarPropertiesSliderNextArrow";
+import SimilarPropertiesSliderPrevArrow from "./SimilarPropertiesSliderPrevArrow";
 
 const SimilarProperties = () => {
   const settings = {
@@ -18,13 +19,14 @@ const SimilarProperties = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
+    nextArrow: <SimilarPropertiesSliderNextArrow />,
+    prevArrow: <SimilarPropertiesSliderPrevArrow />,
     responsive: [
       {
         breakpoint: 1400,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-          infinite: true,
         },
       },
       {
@@ -32,7 +34,6 @@ const SimilarProperties = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          infinite: true,
         },
       },
       {
@@ -40,7 +41,6 @@ const SimilarProperties = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          infinite: true,
         },
       },
       {
@@ -48,7 +48,6 @@ const SimilarProperties = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          initialSlide: 2,
         },
       },
       {

@@ -26,6 +26,7 @@ export default {
         danger: "#F55667",
         star: "#FF8A00",
         lightBlack: "#1C1D22",
+        footerPink: "#FFF2E2",
       },
     },
   },

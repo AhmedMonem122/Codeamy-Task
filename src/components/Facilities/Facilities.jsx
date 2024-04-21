@@ -13,7 +13,7 @@ const Facilities = () => {
               See On Map
             </a>
           </div>
-          <div className="mt-[9px] flex items-center">
+          <div className="mt-[9px] flex items-center text-nowrap">
             <div className="rounded-[3px] py-[4px] px-[6px] sm:px-[10px] bg-[#130F260D] text-[#2C2D33] font-[500] text-[14px] flex items-center justify-center gap-[4px] sm:gap-[11px]">
               <div className="text-[22px] text-secondary">
                 <MdOutlineFastfood />

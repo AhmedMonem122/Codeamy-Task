@@ -8,6 +8,7 @@ import Amenities from "./components/Amenities/Amenities";
 import Facilities from "./components/Facilities/Facilities";
 import Reviews from "./components/Reviews/Reviews";
 import SimilarProperties from "./components/SimilarProperties/SimilarProperties";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Facilities />
       <Reviews />
       <SimilarProperties />
+      <Footer />
     </Fragment>
   );
 }
