@@ -1,10 +1,11 @@
 import { FiMapPin, FiShare2, FiHeart, FiCamera } from "react-icons/fi";
-import mediaPhoto1 from "../../assets/images/media-1.png";
-import mediaPhoto2 from "../../assets/images/media-2.png";
-import mediaPhoto3 from "../../assets/images/media-3.png";
+
 import { useState } from "react";
+import content from "../../content/content";
+import SingleMedia from "./SingleMedia";
 
 const Media = () => {
+  const [media, setMedia] = useState(content.mediaContent);
   const [isSelected, setIsSelected] = useState(false);
 
   return (
@@ -53,39 +54,15 @@ const Media = () => {
         </div>
 
         <div className="mt-5 grid grid-cols-2 md:grid-cols-3 gap-[16px] md:gap-[19px]">
-          <div className="cursor-pointer relative group">
-            <img
-              src={mediaPhoto1}
-              alt="media photo 1"
-              className="w-full h-full"
-            />
-
-            <div className="absolute top-0 left-0 w-0 h-full overflow-hidden bg-[rgba(0,0,0,.5)] flex items-center justify-center text-white font-[400] text-[16px] md:text-[48px] transition-all group-hover:w-full">
-              +4
-            </div>
-          </div>
-          <div className="cursor-pointer relative group">
-            <img
-              src={mediaPhoto2}
-              alt="media photo 2"
-              className="w-full h-full"
-            />
-
-            <div className="absolute top-0 left-0 w-0 h-full overflow-hidden bg-[rgba(0,0,0,.5)] flex items-center justify-center text-white font-[400] text-[16px] md:text-[48px] transition-all group-hover:w-full">
-              +4
-            </div>
-          </div>
-          <div className="cursor-pointer relative group">
-            <img
-              src={mediaPhoto3}
-              alt="media photo 3"
-              className="w-full h-full"
-            />
-
-            <div className="absolute top-0 left-0 w-0 h-full overflow-hidden bg-[rgba(0,0,0,.5)] flex items-center justify-center text-white font-[400] text-[16px] md:text-[48px] transition-all group-hover:w-full">
-              +4
-            </div>
-          </div>
+          {media.map((singleMedia) => {
+            return (
+              <SingleMedia
+                key={singleMedia.id}
+                {...singleMedia}
+                media={media}
+              />
+            );
+          })}
         </div>
       </div>
     </section>
