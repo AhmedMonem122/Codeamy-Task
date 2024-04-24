@@ -1,6 +1,5 @@
 import { Fragment } from "react";
 import "./App.css";
-import Navbar from "./components/Navbar/Navbar";
 import BreadCrumb from "./components/BreadCrumb/BreadCrumb";
 import Media from "./components/Media/Media";
 import Properties from "./components/Properties/Properties";
@@ -9,11 +8,12 @@ import Facilities from "./components/Facilities/Facilities";
 import Reviews from "./components/Reviews/Reviews";
 import SimilarProperties from "./components/SimilarProperties/SimilarProperties";
 import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
 
 function App() {
   return (
     <Fragment>
-      <Navbar />
+      <Header />
       <BreadCrumb />
       <Media />
       <Properties />

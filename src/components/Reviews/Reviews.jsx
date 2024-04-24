@@ -1,7 +1,10 @@
-import { GoStarFill } from "react-icons/go";
-import reviewImage from "../../assets/images/Review Image.png";
+import { useState } from "react";
+import content from "../../content/content";
+import Review from "./Review";
 
 const Reviews = () => {
+  const [reviews, setReviews] = useState(content.reviewsContent);
+
   return (
     <section>
       <div className="container mx-auto">
@@ -16,176 +19,15 @@ const Reviews = () => {
           </div>
 
           <div>
-            <div className="mb-[16px] sm:mb-[20px] pb-3 sm:pb-4 border-b border-[#E6E6E6]">
-              <div className="flex justify-between">
-                <div className="flex items-center mb-[3px] sm:mb-[13px]">
-                  <div className="w-[32px] sm:w-[41px]">
-                    <img
-                      src={reviewImage}
-                      alt="Review Image"
-                      className="w-full"
-                    />
-                  </div>
-                  <div className="ml-3 pb-[2px]">
-                    <h4 className="mb-[2px] font-[outfit] font-[500] text-[14px] text-[#1A1A1A]">
-                      Kristin Watson
-                    </h4>
-                    <div className="flex items-center text-star">
-                      <span>
-                        <GoStarFill />
-                      </span>
-                      <span>
-                        <GoStarFill />
-                      </span>
-                      <span>
-                        <GoStarFill />
-                      </span>
-                      <span>
-                        <GoStarFill />
-                      </span>
-                      <span>
-                        <GoStarFill />
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <span className="font-[poppins] font-[400] text-[12px] sm:text-[14px] text-[#999999]">
-                  2 min ago
-                </span>
-              </div>
-              <p className="font-[roboto] sm:font-[outfit] font-[400] text-[14px] sm:text-[16px] text-[#808080] leading-[21px] sm:leading-[24px] w-full lg:w-4/5 xl:w-3/5">
-                Duis at ullamcorper nulla, eu dictum eros.
-              </p>
-            </div>
-            <div className="mb-[16px] sm:mb-[20px] pb-3 sm:pb-4 border-b border-[#E6E6E6]">
-              <div className="flex justify-between">
-                <div className="flex items-center mb-[3px] sm:mb-[13px]">
-                  <div className="w-[32px] sm:w-[41px]">
-                    <img
-                      src={reviewImage}
-                      alt="Review Image"
-                      className="w-full"
-                    />
-                  </div>
-                  <div className="ml-3 pb-[2px]">
-                    <h4 className="mb-[2px] font-[outfit] font-[500] text-[14px] text-[#1A1A1A]">
-                      Kristin Watson
-                    </h4>
-                    <div className="flex items-center text-star">
-                      <span>
-                        <GoStarFill />
-                      </span>
-                      <span>
-                        <GoStarFill />
-                      </span>
-                      <span>
-                        <GoStarFill />
-                      </span>
-                      <span>
-                        <GoStarFill />
-                      </span>
-                      <span>
-                        <GoStarFill />
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <span className="font-[poppins] font-[400] text-[12px] sm:text-[14px] text-[#999999]">
-                  2 min ago
-                </span>
-              </div>
-              <p className="font-[roboto] sm:font-[outfit] font-[400] text-[14px] sm:text-[16px] text-[#808080] leading-[21px] sm:leading-[24px] w-full lg:w-4/5 xl:w-3/5">
-                Keep the soil evenly moist for the healthiest growth. If the sun
-                gets too hot, Chinese cabbage tends to "bolt" or go to seed; in
-                long periods of heat, some kind of shade may be helpful. Watch
-                out for snails, as they will harm the plants.
-              </p>
-            </div>
-            <div className="mb-[16px] sm:mb-[20px] pb-3 sm:pb-4 border-b border-[#E6E6E6]">
-              <div className="flex justify-between">
-                <div className="flex items-center mb-[3px] sm:mb-[13px]">
-                  <div className="w-[32px] sm:w-[41px]">
-                    <img
-                      src={reviewImage}
-                      alt="Review Image"
-                      className="w-full"
-                    />
-                  </div>
-                  <div className="ml-3 pb-[2px]">
-                    <h4 className="mb-[2px] font-[outfit] font-[500] text-[14px] text-[#1A1A1A]">
-                      Kristin Watson
-                    </h4>
-                    <div className="flex items-center text-star">
-                      <span>
-                        <GoStarFill />
-                      </span>
-                      <span>
-                        <GoStarFill />
-                      </span>
-                      <span>
-                        <GoStarFill />
-                      </span>
-                      <span>
-                        <GoStarFill />
-                      </span>
-                      <span>
-                        <GoStarFill />
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <span className="font-[poppins] font-[400] text-[12px] sm:text-[14px] text-[#999999]">
-                  2 min ago
-                </span>
-              </div>
-              <p className="font-[roboto] sm:font-[outfit] font-[400] text-[14px] sm:text-[16px] text-[#808080] leading-[21px] sm:leading-[24px] w-full lg:w-4/5 xl:w-3/5">
-                Vivamus eget euismod magna. Nam sed lacinia nibh, et lacinia
-                lacus.
-              </p>
-            </div>
-            <div className="mb-[16px] sm:mb-[20px] pb-3 sm:pb-4 border-b border-[#E6E6E6]">
-              <div className="flex justify-between">
-                <div className="flex items-center mb-[3px] sm:mb-[13px]">
-                  <div className="w-[32px] sm:w-[41px]">
-                    <img
-                      src={reviewImage}
-                      alt="Review Image"
-                      className="w-full"
-                    />
-                  </div>
-                  <div className="ml-3 pb-[2px]">
-                    <h4 className="mb-[2px] font-[outfit] font-[500] text-[14px] text-[#1A1A1A]">
-                      Kristin Watson
-                    </h4>
-                    <div className="flex items-center text-star">
-                      <span>
-                        <GoStarFill />
-                      </span>
-                      <span>
-                        <GoStarFill />
-                      </span>
-                      <span>
-                        <GoStarFill />
-                      </span>
-                      <span>
-                        <GoStarFill />
-                      </span>
-                      <span>
-                        <GoStarFill />
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <span className="font-[poppins] font-[400] text-[12px] sm:text-[14px] text-[#999999]">
-                  2 min ago
-                </span>
-              </div>
-              <p className="font-[roboto] sm:font-[outfit] font-[400] text-[14px] sm:text-[16px] text-[#808080] leading-[21px] sm:leading-[24px] w-full lg:w-4/5 xl:w-3/5">
-                200+ Canton Pak Choi Bok Choy Chinese Cabbage Seeds Heirloom
-                Non-GMO Productive Brassica rapa VAR. chinensis, a.k.a. Canton's
-                Choice, Bok Choi, from USA
-              </p>
-            </div>
+            {reviews.map((review, index) => {
+              if (index === reviews.length - 1) {
+                return (
+                  <Review key={review.id} {...review} className="border-b-0" />
+                );
+              }
+
+              return <Review key={review.id} {...review} />;
+            })}
           </div>
         </div>
 

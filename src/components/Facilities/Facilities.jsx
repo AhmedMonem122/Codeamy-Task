@@ -1,6 +1,11 @@
+import { useState } from "react";
 import { MdOutlineFastfood, MdEmojiTransportation } from "react-icons/md";
+import content from "../../content/content";
+import Facility from "./Facility";
 
 const Facilities = () => {
+  const [facilities, setFacilities] = useState(content.facilitiesContent);
+
   return (
     <section>
       <div className="container mx-auto">
@@ -29,12 +34,13 @@ const Facilities = () => {
           </div>
           <div className="p-[10px] rounded-[8px]">
             <ul className="grid grid-cols-3 gap-[9px] sm:gap-[10px] font-[500] text-[14px] list-disc pl-[40px]">
-              <li>Holmes</li>
-              <li>KFC</li>
-              <li>Homes</li>
-              <li>Homes</li>
-              <li>Homes</li>
-              <li>Homes</li>
+              {facilities.map((facility) => {
+                const { facilityText } = facility;
+
+                return (
+                  <Facility key={facility.id} facilityText={facilityText} />
+                );
+              })}
             </ul>
           </div>
         </div>

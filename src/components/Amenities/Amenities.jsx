@@ -1,4 +1,10 @@
+import { useState } from "react";
+import content from "../../content/content";
+import Amenity from "./Amenity";
+
 const Amenities = () => {
+  const [amenities, setAmenities] = useState(content.amenitiesContent);
+
   return (
     <section>
       <div className="container mx-auto">
@@ -7,33 +13,11 @@ const Amenities = () => {
             Amenities
           </h2>
           <div className="grid grid-cols-3 sm:grid-cols-4 gap-[10px] text-center text-nowrap">
-            <p className="rounded-[4px] py-[4px] px-[8px] bg-lightPrimary text-primary font-[500] text-[14px]">
-              Air Conditioning
-            </p>
-            <p className="rounded-[4px] py-[4px] px-[8px] bg-lightPrimary text-primary font-[500] text-[14px]">
-              Electricity
-            </p>
-            <p className="rounded-[4px] py-[4px] px-[8px] bg-lightPrimary text-primary font-[500] text-[14px]">
-              Balacony
-            </p>
-            <p className="rounded-[4px] py-[4px] px-[8px] bg-lightPrimary text-primary font-[500] text-[14px]">
-              Heating
-            </p>
-            <p className="rounded-[4px] py-[4px] px-[8px] bg-lightPrimary text-primary font-[500] text-[14px]">
-              Heating
-            </p>
-            <p className="rounded-[4px] py-[4px] px-[8px] bg-lightPrimary text-primary font-[500] text-[14px]">
-              Wifi
-            </p>
-            <p className="rounded-[4px] py-[4px] px-[8px] bg-lightPrimary text-primary font-[500] text-[14px]">
-              Smart Tv
-            </p>
-            <p className="rounded-[4px] py-[4px] px-[8px] bg-lightPrimary text-primary font-[500] text-[14px]">
-              Kitchen
-            </p>
-            <p className="rounded-[4px] py-[4px] px-[8px] bg-lightPrimary text-primary font-[500] text-[14px]">
-              Elevator
-            </p>
+            {amenities.map((amenity) => {
+              const { amenityText } = amenity;
+
+              return <Amenity key={amenity.id} amenityText={amenityText} />;
+            })}
           </div>
         </div>
       </div>
